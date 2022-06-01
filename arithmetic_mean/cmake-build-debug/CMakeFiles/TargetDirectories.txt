@@ -1,0 +1,3 @@
+C:/Users/Kot/CLionProjects/hw33/arithmetic_mean/cmake-build-debug/CMakeFiles/arithmetic_mean.dir
+C:/Users/Kot/CLionProjects/hw33/arithmetic_mean/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kot/CLionProjects/hw33/arithmetic_mean/cmake-build-debug/CMakeFiles/rebuild_cache.dir
