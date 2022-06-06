@@ -2,11 +2,9 @@
 #include <vector>
 #include <exception>
 
-
 template<typename T1,typename T2>
 
 class Register{
-
     T1 key;
     T2 value;
 public:
@@ -16,7 +14,16 @@ public:
     Register(T1 inKey,T2 inValue):key(inKey),value(inValue)
     {
     }
+    void add(){
+        x_Pair.first=key;
+        x_Pair.second=value;
+        vec.push_back(x_Pair);
+    }
+private:
+    std::pair<T1,T2>x_Pair;
+    std::vector<std::pair<T1,T2>> vec;
 };
+
 template<typename T>
 T typeDetect(T var){
     bool str= false;
@@ -53,6 +60,7 @@ void add(int count){
 
     if (typeDetect(key) == "sting" && typeDetect(value) == "string") {
          Register<std::string, std::string>reg (key, value);
+         reg.add();
     }
     else if(typeDetect(key)=="int"&& typeDetect(value)=="string"){
         keyInt= std::stoi(key);
@@ -97,7 +105,6 @@ void remove (std::string key){
 }
 
 int main() {
-    std::vector<Register> vec;
     int count=-1;
     std::string com;
     std::string key;
